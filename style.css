@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light theme */
+body.light {
+  background-color: #f0f0f0;
+  color: #222;
+}
+
+/* Dark theme */
+body.dark {
+  background-color: #222;
+  color: #f0f0f0;
+}
+
+.calculator {
+  background: inherit;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(104, 101, 101, 0.2);
+  width: 90%;
+  max-width: 350px; /* Adjust size */
+}
+
+.display {
+  width: 95%;
+  height: 60px;
+  text-align: right;
+  font-size: 24px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  color: inherit;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 18px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+body.light button {
+  background: #8172f7;
+  color: #000;
+}
+
+body.dark button {
+  background: #ffffff;
+  color: #0d0000;
+}
+
+button:hover {
+  opacity: 0.9;
+  color: #e3931a;
+}
+
+/* On click (active state) */
+button:active {
+  transform: scale(0.95);
+  background-color: #af8f5f; /* Orange effect when clicked */
+  color: rgb(178, 123, 123);
+}
+
+.theme-toggle {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
